@@ -1,0 +1,129 @@
+.ringo {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.ringo_title {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: center;
+    color: var(--chorniy);
+    margin-bottom: 50px;
+}
+
+.ringo_text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 145%;
+    color: var(--chorniy);
+    padding-left: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        background-image: url(../img/ringo_im.svg);
+        position: absolute;
+        left: -16px;
+    }
+}
+
+.ringo_content {
+    border-top: 1px solid var(--chorniy);
+    border-bottom: 1px solid var(--chorniy);
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 100%;
+        display: inline-block;
+        border: 1px solid var(--chorniy);
+        position: absolute;
+        top: 50%;
+        left: -10px;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .ringo {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .ringo_title {
+        font-size: 28px;
+        line-height: 130%;
+        margin-bottom: 60px;
+    }
+
+    .ringo_content {
+        display: flex;
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+
+        &::before {
+            width: 0;
+            height: 198px;
+            left: 50%;
+            top: 0;
+        }
+    }
+
+    .ringo_text {
+        padding: 28px;
+
+        &::before {
+            left: 3px;
+        }
+    }
+}
+
+
+@media screen and (min-width:1000px) {
+    .ringo {
+        padding-top: 140px;
+        padding-bottom: 140px;
+    }
+
+    .ringo_title {
+        font-size: 36px;
+        line-height: 130%;
+        max-width: 814px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ringo_content {
+        width: 960px;
+
+        &::before {
+            height: 164px;
+        }
+    }
+
+    .ringo_text {
+        padding: 35px 77px;
+        width: 494px;
+
+        &::before {
+            left: 45px;
+        }
+    }
+}
+
+
+@media screen and (min-width:1200px) {
+    .ringo_block{
+        background-image: url(../img/ringo_bg_img.png), url(../../img/ringo_bg_img.png);
+        background-repeat: no-repeat;
+        background-position: top -8px left -5px, right bottom 57px;
+    }
+}
